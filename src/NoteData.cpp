@@ -5,13 +5,13 @@
  */
 
 #include "global.h"
-#include "NoteData.h"
-#include "RageUtil.h"
-#include "RageLog.h"
-#include "XmlFile.h"
-#include "GameState.h" // blame radar calculations.
 #include "Foreach.h"
+#include "GameState.h" // blame radar calculations.
+#include "NoteData.h"
+#include "RageLog.h"
+#include "RageUtil.h"
 #include "RageUtil_AutoPtr.h"
+#include "XmlFile.h"
 
 REGISTER_CLASS_TRAITS( NoteData, new NoteData(*pCopy) )
 
@@ -199,7 +199,7 @@ const vector<NoteInfo>& NoteData::SerializeNoteData(const vector<float>& etaner)
 	for (size_t i = 0; i < NonEmptyRowVector.size(); i++)
 	{
 		int rowNotes = 0;
-		for (size_t q = 0; q < tracks; q++)
+		for (int q = 0; q < tracks; q++)
 		{
 			if(GetTapNote(q, NonEmptyRowVector[i]).IsNote())
 			{
@@ -224,7 +224,7 @@ vector<NoteInfo2>& NoteData::SerializeNoteData2(const vector<float>& etaner) {
 	for (size_t i = 0; i < NonEmptyRowVector.size(); i++)
 	{
 		int rowNotes = 0;
-		for (size_t q = 0; q < tracks; q++)
+		for (int q = 0; q < tracks; q++)
 		{
 			if (GetTapNote(q, NonEmptyRowVector[i]).IsNote())
 			{

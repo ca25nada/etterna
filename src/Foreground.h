@@ -1,8 +1,7 @@
-#ifndef FOREGROUND_H
+﻿#ifndef FOREGROUND_H
 #define FOREGROUND_H
 
 #include "ActorFrame.h"
-#include "TimingData.h"
 
 class Song;
 /** @brief Foreground in front of notes while playing. */
